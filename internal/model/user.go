@@ -7,8 +7,7 @@ type User struct {
 	Name         string `gorm:"type:varchar(100);not null"`
 	Email        string `gorm:"type:varchar(120);uniqueIndex;not null"`
 	PasswordHash string `gorm:"type:text;not null"`
+	Items []Item `gorm:"foreignId:UserID"`
 	CreatedAt    time.Time
 	UpdatedAt    time.Time
 }
-
-Items []Item `gorm:"foreignId:UserID"`
