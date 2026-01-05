@@ -44,6 +44,6 @@ func (r *itemRepository) Delete(id string) error {
 	return r.db.Delete(&model.Item{}, "id = ?", id).Error
 }
 
-func NewItemRepository(db *gorm.DB) UserRepository {
-	return &userRepository{db: db}
+func NewItemRepository(db *gorm.DB) ItemRepository {
+	return &itemRepository{db: db}
 }
