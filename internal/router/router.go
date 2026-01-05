@@ -19,7 +19,7 @@ func SetupRouter(
 
 	auth := r.Group("/auth")
 	{
-		auth.POST("/register", authHandler.Login)
+		auth.POST("/login", authHandler.Login)
 		auth.POST("/register", authHandler.Register)
 	}
 
